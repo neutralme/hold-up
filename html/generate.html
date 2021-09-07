@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoldUp-Locker</title>
+  <link rel="stylesheet" href="../css/style1.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+</head>
+
+<body class="bodi">
+  <br>
+  <h2>Create A Lock</h2>
+  <form>
+    <span class="title">Fill The Form</span>
+    <div class="container">
+      <img src="../image/link.png" class="icon"><input type="text" placeholder="Your Link" required>
+    </div>
+    <div class="container">
+      <img src="../image/user.png" class="icon"><input type="text" placeholder="Username To Display (optional)">
+    </div>
+    <div class="container">
+      <img src="../image/hint.png" class="icon"><input type="text"  placeholder="Some Hint (optional)">
+    </div>
+    <div class="container">
+      <img src="../image/password.png" class="icon"><input type="password" placeholder="Password" required><img src="../image/eye-closed.png" class="icon" id="eye">
+    </div>
+    <div class="container">
+      <img src="../image/tries.png" class="icon"><input type="number" placeholder="Maximum Tries" required>
+    </div>
+    <button>GO</button>
+  </form>
+  <div class="popup">
+    <div class="top">
+      <img src="../image/cross.png" class="icon"><span class="popupTitle">INVALID ENTRY</span>
+    </div>
+    <div class="middle">
+      Something went wrong unexpectedly. Please try checking out your entries Or contact the administrator. <br>
+      <div id="details"></div>
+    </div>
+    <div class="bottom">
+      <button id="close">CLOSE</button>
+    </div>
+  </div>
+  <script src="../js/main1.js">
+  </script>
+</body>
+
+</html>
