@@ -45,10 +45,10 @@ const submitData = () => {
 // ===== EVENTS ===== //
 eye.addEventListener("click", function() {
   if (password.type === "password") {
-    eye.src = "../image/eye-open.png";
+    eye.src = "..image/eye-open.png";
     password.type = "text";
   } else {
-    eye.src = "../image/eye-closed.png"
+    eye.src = "..image/eye-closed.png"
     password.type = "password";
   }
 });

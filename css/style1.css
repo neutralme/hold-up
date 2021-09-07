@@ -128,6 +128,6 @@ button:nth-child(1) {
 @media only screen and (max-width: 768px) {
   form {
     width: 90%;
-    transform: translate(-50%, -90%);
+    transform: translate(-50%, -70%);
   }
 }
