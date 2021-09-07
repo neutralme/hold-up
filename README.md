@@ -6,6 +6,7 @@ A simple tool to lock your private URL and share with your friends. Remember tha
 2) Send it to the receiver.
 <image src="image/2.jpg">
 <hr>
+NOTE: Link Shortening Feature Will Be Added Soon.
 <li>Made with: <a href="">Spck Editor</a></li>
 <li>Instagram: <a href="https://instagram.com/sharma0rohit">sharma0rohit</a></li>
 <li>Icons: <a href="">Iconic</a></li>
