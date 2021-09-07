@@ -18,12 +18,8 @@ let submit = document.getElementsByTagName("button")[0]
 // ===== FUNCTIONS ===== //
 function decryptUrl() {
   value = JSON.parse(atob(value));
-  let names = value["n"];
-  let hints = value["h"];
-  let maxs = atob(value["m"]);
   document.getElementById("name").innerText = names;
   document.getElementById("hint").innerText = hints;
-  console.log(names, hints, maxs);
 }
 const submitData = () => {
   if (password.value.length >= 6) {
@@ -44,12 +40,16 @@ const submitData = () => {
 
 // ===== EVENTS ===== //
 eye.addEventListener("click", function() {
-  if (password.type === "password") {
-    eye.src = "..image/eye-open.png";
-    password.type = "text";
+  if (+localStorage.getItem(location.href) >= atob(value["m"])) {
+    if (password.type === "password") {
+      eye.src = "../image/eye-open.png";
+      password.type = "text";
+    } else {
+      eye.src = "../image/eye-closed.png"
+      password.type = "password";
+    }
   } else {
-    eye.src = "..image/eye-closed.png"
-    password.type = "password";
+    window.close();
   }
 });
 
