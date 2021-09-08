@@ -18,8 +18,8 @@ let submit = document.getElementsByTagName("button")[0]
 // ===== FUNCTIONS ===== //
 function decryptUrl() {
   value = JSON.parse(atob(value));
-  document.getElementById("name").innerText = names;
-  document.getElementById("hint").innerText = hints;
+  document.getElementById("name").innerText = value["n"];
+  document.getElementById("hint").innerText = value["h"];
 }
 const submitData = () => {
   if (password.value.length >= 6) {
