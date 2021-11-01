@@ -1,0 +1,134 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: sans;
+  src: url('../font/sans.ttf');
+}
+@font-face {
+  font-family: eom;
+  src: url('../font/eom.ttf');
+}
+* {
+  font-family: sans;
+}
+body {
+  padding: 0 25px;
+  background-image: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+h2 {
+  text-align: center;
+}
+form {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 10px;
+  background-color: #747FFF;
+  border: 2px solid #FFFFFF;
+  box-shadow: 5px 5px 5px #978F8F;
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+.title {
+  color: #FFFFFF;
+  display: block;
+  font-family: eom;
+  text-align: center;
+  margin-bottom: 20px;
+}
+input {
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border: 0px solid #000000;
+  border-bottom: 2px solid #FFFFFF;
+}
+input:hover {
+  border-bottom: 2px solid blueviolet;
+}
+.icon {
+  height: 40px;
+  width: 40px;
+}
+button {
+  display: block;
+  padding: 8px 32px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px solid #FFFFFF;
+}
+.popup {
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  z-index: 10;
+  position: fixed;
+  transition: 0.5s;
+  padding: 0 0 0 0;
+  transition: 200ms ease-in-out;
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: #FFFFFF;
+  transform: translate(-50%, -50%) scale(0);
+  box-shadow: 10px 30px 10px #42445A;
+}
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.bodi.active {
+  background-color: rgb(0,0,0,.5);
+}
+.top {
+  display: flex;
+  text-align: left;
+  padding: 4px 10px 4px 10px;
+  background-color: #FF0000;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 3px solid black;
+}
+.popupTitle {
+  color: #FFFFFF;
+  margin-top: 10px;
+  font-family: eom;
+  margin-left: 20px;
+}
+.middle {
+  margin: 8px;
+}
+#details {
+  font-weight: bold;
+  text-align: center;
+  font-family: monospace;
+}
+.bottom {
+  display: block;
+  padding: 8px;
+}
+button:nth-child(1) {
+  color: #FFFFFF;
+  background: #FF4A4A;
+}
+@media only screen and (max-width: 768px) {
+  form {
+    top: 50%;
+    width: 90%;
+    transform: translate(-50%, -90%);
+  }
+}

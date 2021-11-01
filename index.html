@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HoldUp</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+</head>
+<body>
+  <div class="dialog">
+    <div class="top">
+      <table border="0px solid black">
+        <tr>
+          <td><img src="../image/lock.png" alt="🔐" class="lock"></td>
+          <td><span class="title">PASSWORD PROTECTED</span></td>
+          <td><span class="close">&times;</span></td>
+        </tr>
+      </table>
+    </div>
+    <div class="middle">
+      <h5>Locked By: <span id="name">Rohit Sharma</span></h5>
+      <h5>Given Hint: <span id="hint">No Hint Provided</span></h5>
+      <form class="container">
+        <input type="password" placeholder="Enter Password Here" id="password"><img src="../image/eye-closed.png" alt="EYES" id="eye">
+      </form>
+      <button>SUBMIT</button>
+    </div>
+    <div class="bottom">
+      <div class="new">CREATE NEW LOCK</div>
+      <img src="../image/facebook.png" alt="Facebook">
+      <img src="../image/instagram.png" alt="Instagram">
+      <img src="../image/github.png" alt="Github">
+      <img src="../image/twitter.png" alt="Twitter">
+    </div>
+  </div>
+  <script src="js/main.js">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: sans;
+  src: url('../font/sans.ttf');
+}
+@font-face {
+  font-family: eom;
+  src: url('../font/eom.ttf');
+}
+* {
+  font-family: sans;
+}
+body {
+  padding: 0 25px;
+  background-image: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+.dialog {
+  width: 47%;
+  display: block;
+  margin-top: 90%;
+  transition: 0.5s;
+  margin-left: 50%;
+  padding: 0 0 0 0;
+  border-radius: 10px;
+  border: 3px solid black;
+  background-color: #FFFFFF;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 30px 10px #42445A;
+}
+.dialog:hover {
+  box-shadow: 0px 0px 0px #42445A;
+}
+.top {
+  text-align: left;
+  padding: 4px 10px 4px 10px;
+  background-color: #A9B4C1;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 3px solid black;
+}
+td:nth-child(2){
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.lock {
+  height: 40px;
+  width: 40px;
+}
+.title {
+  font-family: eom;
+}
+.close {
+  font-size: 20px;
+  transition: 0.3s;
+  border-radius: 2px;
+  padding: 1px 4px 2px 4px;
+}
+.close:hover {
+  color: #FFFFFF;
+  background: #2A78DF;
+}
+.middle {
+  margin: 8px;
+  line-height: 20px;
+}
+#name {
+  color: #EA0749;
+  font-weight: bold;
+  text-decoration: underline solid;
+}
+#hint {
+  color: #63DF9E;
+  text-decoration: underline solid;
+}
+.container {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: 2px solid #1B5BE2;
+}
+#eye {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+}
+#password {
+  width: 100%;
+  outline: none;
+  padding: 10px 8px;
+  font-size: 15px;
+  border: 0px solid #000000;
+}
+.middle button {
+  color: #FFFFFF;
+  display: block;
+  transition: 0.3s;
+  padding: 6px 16px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px solid #71FF00;
+  background-color: #2D74CD;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #7F8791;
+}
+.middle button:hover {
+  box-shadow: 0px 0px 0px #7F8791;
+}
+.middle button.invalid {
+  background-color: tomato;
+}
+.middle button.success {
+  background-color: #00FF34;
+}
+.bottom {
+  transition: 0.3s;
+  text-align: center;
+  border-top: 3px solid black;
+  padding: 8px 0 0 0;
+  background-color: #A9B4C1;
+  border-radius: 0 0 8px 8px;
+}
+.new {
+  padding: 8px;
+  color: #000000;
+  font-size: 13px;
+  text-decoration: underline;
+}
+.bottom img {
+  height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .dialog {
+    width: 100%;
+  }
+}
