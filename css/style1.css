@@ -15,6 +15,9 @@
 }
 body {
   padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(to right, #2193b0, #6dd5ed);
 }
 h2 {

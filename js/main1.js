@@ -54,7 +54,7 @@ const generate = () => {
         maxValue = btoa(max.value);
         let object = new objectMaker(urlValue, nameValue, hintValue, passValue, maxValue);
         object = btoa(JSON.stringify(object));
-        location.href = "http://localhost:7700/index.html?v=" + object;
+        location.href = "https://holdup.netlify.app?v=" + object;
       } else {
         error("Minimum tries must be at least '1");
       }

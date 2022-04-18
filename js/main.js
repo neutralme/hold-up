@@ -6,7 +6,7 @@ let urls = "",
   keys = "",
   maxs = 0;
 let value = new URL(decodeURIComponent(location.href)).searchParams.get('v')
-value != undefined || value != null ? decryptUrl() : location.href = 'http://localhost:7700' + '/html/generate.html';
+value != undefined || value != null ? decryptUrl() : location.href = '/html/generate.html';
 
 // ===== NODES ===== //
 let dialog = document.getElementsByClassName("dialog")[0];
