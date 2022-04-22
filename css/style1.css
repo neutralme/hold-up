@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 @font-face {
   font-family: sans;
@@ -14,24 +15,83 @@
   font-family: sans;
 }
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
   padding: 0 25px;
-  background-image: linear-gradient(to right, #2193b0, #6dd5ed);
+  background-image: linear-gradient(to right, #1C1C1C, #1C1C1C);
 }
 h2 {
   text-align: center;
+  color: #fff;
 }
 form {
   width: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -150%);
   padding: 10px;
-  margin-top: 30px;
   border-radius: 10px;
+  margin-top: 20px;
   background-color: #747FFF;
-  border: 2px solid #FFFFFF;
+  border: none;
+  outline: none;
   box-shadow: 5px 5px 5px #978F8F;
+  user-select: none;
+  -webkit-user-select: none;
+  position: relative;
+  z-index: 1;
+}
+
+form:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+form:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #747FFF;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 .container {
   width: 100%;
@@ -39,7 +99,6 @@ form {
   padding: 4px 10px;
   margin-bottom: 10px;
   border-radius: 8px;
-  box-sizing: border-box;
   background-color: #FFFFFF;
 }
 .title {
@@ -128,6 +187,5 @@ button:nth-child(1) {
 @media only screen and (max-width: 768px) {
   form {
     width: 90%;
-    transform: translate(-50%, -70%);
   }
 }

@@ -6,7 +6,7 @@ let urls = "",
   keys = "",
   maxs = 0;
 let value = new URL(decodeURIComponent(location.href)).searchParams.get('v')
-value != undefined || value != null ? decryptUrl() : location.href = 'https://neutralme.github.io/hold-up' + '/html/generate.html';
+value != undefined || value != null ? decryptUrl() : location.href = 'https://lockmylink.netlify.app/hold-up' + '/html/generate.html';
 
 // ===== NODES ===== //
 let dialog = document.getElementsByClassName("dialog")[0];
@@ -34,22 +34,18 @@ const submitData = () => {
     setTimeout(function() {
       submit.innerText = "SUBMIT";
       submit.classList.remove("invalid");
-    }, 3000)
+    }, 1000)
   }
 };
 
 // ===== EVENTS ===== //
 eye.addEventListener("click", function() {
-  if (+localStorage.getItem(location.href) >= atob(value["m"])) {
-    if (password.type === "password") {
-      eye.src = "../image/eye-open.png";
-      password.type = "text";
-    } else {
-      eye.src = "../image/eye-closed.png"
-      password.type = "password";
-    }
+  if (password.type === "password") {
+    eye.src = "../image/eye-open.png";
+    password.type = "text";
   } else {
-    window.close();
+    eye.src = "../image/eye-closed.png"
+    password.type = "password";
   }
 });
 
